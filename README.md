@@ -1,5 +1,10 @@
 # tweak-unifi-gateway
 
+## Create a static route in unifi controller for IPTV
+destination network: 185.41.48.0/24
+
+Next Hop: [VLAN 4 gateway IP]
+
 
 ### To enable RTSP Conntrack in the Unifi USG ###
 
