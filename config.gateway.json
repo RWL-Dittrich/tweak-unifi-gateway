@@ -14,6 +14,7 @@
             "address": [
               "dhcp"
             ],
+            "mac": "60:31:CF:DD:51:AB",
             "dhcp-options": {
               "default-route-distance": "1",
                 "default-route": "update",
@@ -35,7 +36,7 @@
             "address": [
               "dhcp"
             ],
-            "mac": "B4:Fb:E4:81:E2:EE",
+            "mac": "60:31:CF:DD:51:AC",
     	    "description": "eth0.4 - IPTV",
             "dhcp-options": {
               "client-option": [
@@ -142,7 +143,35 @@
           "outbound-interface": "eth0.34",
           "protocol": "all",
           "type": "masquerade"
+        },
+        "6002": {
+          "description": "MASQ remote_user_vpn_network to WAN",
+          "log": "disable",
+          "outbound-interface": "eth0.34",
+          "protocol": "all",
+          "source": {
+            "group": {
+              "network-group": "remote_user_vpn_network"
+            }
+          },
+          "type": "masquerade"
         }
+      }
+    }
+  },
+  "vpn": {
+    "ipsec": {
+      "auto-firewall-nat-exclude": "disable",
+      "ipsec-interfaces": {
+        "interface": [
+          "eth0.34"
+        ]
+      },
+      "nat-traversal": "enable"
+    },
+    "l2tp": {
+      "remote-access": {
+        "dhcp-interface": "eth0.34"
       }
     }
   },
