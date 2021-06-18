@@ -159,22 +159,6 @@
       }
     }
   },
-  "vpn": {
-    "ipsec": {
-      "auto-firewall-nat-exclude": "disable",
-      "ipsec-interfaces": {
-        "interface": [
-          "eth0.34"
-        ]
-      },
-      "nat-traversal": "enable"
-    },
-    "l2tp": {
-      "remote-access": {
-        "dhcp-interface": "eth0.34"
-      }
-    }
-  },
   "system": {
     "conntrack": {
       "modules": {
